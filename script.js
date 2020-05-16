@@ -156,3 +156,7 @@ function chooseOptExpenses() {
 
 }
 chooseOptExpenses();
+
+// Объекты и методы объектов
+ 
+
