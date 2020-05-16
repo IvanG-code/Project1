@@ -158,5 +158,64 @@ function chooseOptExpenses() {
 chooseOptExpenses();
 
 // Объекты и методы объектов
- 
 
+// Перебор свойств и ключей внутри объекта
+const options = {
+    name: 'test',
+    width: 1024,
+    height: 1024,
+    colors: {
+        border: 'black',
+        bg: 'red'
+    },
+    makeTest: function () { // создаем свой метод
+        console.log("TEst");
+    }
+};
+options.makeTest();
+
+const {border,bg} = options.colors;
+//console.log(Object.keys(options));
+
+// console.log (options.name);
+
+// delete options.name;
+
+// console.log(options);
+// let counter = 0; // ПОдсчет кол-ва свойств в объекте
+// for (let key in options) {
+//     if (typeof(options[key])== 'object') {
+//         for (let i in options[key]) {
+//             console.log(`свойство ${i} имеет значение ${options[key][i]}`);
+//             counter++;    
+//         }        
+//     }else{
+//         console.log(`свойство ${key} имеет значение ${options[key]}`);
+//         counter++;
+//     }   
+// }
+// console.log(counter);
+
+// Массивы и их методы
+
+const arr = [2,3,6,8,10];
+arr.sort(compareNum);
+console.log(arr);
+
+function compareNum(a,b){     // функцмя для сортировки чисел
+    return a-b;
+}
+
+arr.forEach(function(item, i, arr){
+    console.log(`$[i]: ${item} внутри массива ${arr}`);
+});
+
+for (let value of arr) {
+    console.log(value);
+}
+
+const str = promt("", "");
+const products = str.split(", ");
+products.sort();
+console.log(products);
+console.log(products.join('; ')); // метод join
